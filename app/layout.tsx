@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { Toaster } from "sonner";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const geist = Geist({
@@ -10,7 +11,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "গ্রাম ডিরেক্টরি | Village Directory",
+  title: "গ্রাম ডিরেক্টরি | মুজাফরাবাদ পল্লী উন্নয়ন সংস্থা",
   description:
     "গ্রামের বাসিন্দাদের ডিজিটাল তথ্যভাণ্ডার, রক্তের গ্রুপ ও যোগাযোগের ডিরেক্টরি - Village Resident Directory & Member Management System",
   keywords: [
@@ -45,19 +46,7 @@ export default function RootLayout({
       >
         <Navbar />
         <main className="flex-1 flex flex-col">{children}</main>
-        <footer className="border-t border-sand-border bg-cream-soft py-6 px-4 text-center text-sm text-earth-muted">
-          <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-forest-700 inline-block"></span>
-              <p className="font-medium text-forest-800">
-                গ্রাম ডিরেক্টরি &bull; Village Directory
-              </p>
-            </div>
-            <p className="text-xs text-earth-subtle">
-              মুজাফরাবাদ পল্লী উন্নয়ন সংস্থা &copy;{new Date().getFullYear()} 
-            </p>
-          </div>
-        </footer>
+        <Footer />
         <Toaster
           position="top-right"
           richColors
