@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
+@theme {
+  --color-forest-950: #0f241a;
+  --color-forest-900: #143628;
+  --color-forest-800: #1b4332;
+  --color-forest-700: #2d6a4f;
+  --color-forest-600: #40916c;
+  --color-forest-500: #52b788;
+  --color-forest-400: #74c69d;
+  --color-forest-200: #b7e4c7;
+  --color-forest-100: #d8f3dc;
+  --color-forest-50: #f2f9f4;
+
+  --color-terracotta-700: #933335;
+  --color-terracotta-600: #a73c3e;
+  --color-terracotta-500: #bc4749;
+  --color-terracotta-400: #cc5d5f;
+  --color-terracotta-100: #fbecec;
+  --color-terracotta-50: #fdf5f5;
+
+  --color-clay-700: #9c6c3e;
+  --color-clay-600: #b88657;
+  --color-clay-500: #d4a373;
+  --color-clay-400: #dfb892;
+  --color-clay-100: #faede2;
+  --color-clay-50: #fdf7f2;
+
+  --color-cream-base: #fdfbf7;
+  --color-cream-soft: #f7f4ea;
+  --color-cream-card: #ffffff;
+  --color-cream-hover: #f1ede0;
+
+  --color-sand-border: #e9e5d9;
+  --color-sand-dark: #d8d1be;
+  --color-sand-light: #f4f0e6;
+
+  --color-earth-dark: #2c221e;
+  --color-earth-muted: #64564c;
+  --color-earth-subtle: #8e8075;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #fdfbf7;
+  --foreground: #2c221e;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom scrollbars with rural aesthetic */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f7f4ea;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4a373;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2d6a4f;
+}
+
+/* Subtle pattern / grain background for rural feel */
+.gramin-pattern {
+  background-color: #fdfbf7;
+  background-image: radial-gradient(#d4a373 0.65px, transparent 0.65px), radial-gradient(#2d6a4f 0.65px, #fdfbf7 0.65px);
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
+  background-opacity: 0.15;
+}
+
+.gramin-hero-gradient {
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 60%, #40916c 100%);
+}
+
+.gramin-card-shadow {
+  box-shadow: 0 4px 20px -2px rgba(44, 34, 30, 0.06), 0 2px 6px -1px rgba(44, 34, 30, 0.04);
 }

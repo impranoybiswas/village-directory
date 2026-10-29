@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient (Rich Forest Green) -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f241a" />
+      <stop offset="45%" stop-color="#1b4332" />
+      <stop offset="100%" stop-color="#2d6a4f" />
+    </linearGradient>
+
+    <!-- Morning Sun / Community Accent -->
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e29578" />
+      <stop offset="100%" stop-color="#bc4749" />
+    </linearGradient>
+
+    <!-- Rural Roof Gradient -->
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5e1ce" />
+      <stop offset="50%" stop-color="#d4a373" />
+      <stop offset="100%" stop-color="#b88657" />
+    </linearGradient>
+
+    <!-- Tree Foliage Gradient -->
+    <linearGradient id="treeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#95d5b2" />
+      <stop offset="60%" stop-color="#52b788" />
+      <stop offset="100%" stop-color="#2d6a4f" />
+    </linearGradient>
+
+    <!-- Subtle Hill Slope -->
+    <linearGradient id="hillGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#40916c" />
+      <stop offset="100%" stop-color="#1b4332" />
+    </linearGradient>
+
+    <!-- Drop Shadow for House -->
+    <filter id="elevate" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#091811" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- App Icon Squircle Background -->
+  <rect width="512" height="512" rx="124" fill="url(#bgGrad)" />
+  <rect x="14" y="14" width="484" height="484" rx="112" fill="none" stroke="#74c69d" stroke-width="6" stroke-opacity="0.25" />
+
+  <!-- Rising Dawn Sun (Top Right) -->
+  <circle cx="395" cy="145" r="46" fill="url(#sunGrad)" opacity="0.95" />
+
+  <!-- Rolling Village Hill Ground -->
+  <path d="M40 395 Q180 345 340 375 T472 385 L472 430 Q380 472 256 472 Q132 472 40 430 Z" fill="url(#hillGrad)" opacity="0.8" />
+
+  <!-- Village Shade Tree (Left) -->
+  <g>
+    <!-- Trunk -->
+    <path d="M165 290 L165 400 Q175 402 185 400 L185 290 Z" fill="#9c6c3e" />
+    
+    <!-- Leaves / Canopy -->
+    <circle cx="175" cy="225" r="75" fill="url(#treeGrad)" filter="url(#elevate)" />
+    <circle cx="120" cy="255" r="55" fill="url(#treeGrad)" opacity="0.92" />
+    <circle cx="215" cy="265" r="48" fill="url(#treeGrad)" opacity="0.88" />
+    <!-- Leaf Highlight -->
+    <circle cx="160" cy="195" r="28" fill="#d8f3dc" opacity="0.4" />
+  </g>
+
+  <!-- Village Cottage / House (Foreground Right) -->
+  <g filter="url(#elevate)">
+    <!-- House Base/Wall -->
+    <rect x="235" y="275" width="180" height="130" rx="16" fill="#fdfbf7" />
+
+    <!-- Cottage Gable Roof -->
+    <polygon points="210,285 325,175 440,285" fill="url(#roofGrad)" />
+    
+    <!-- Roof trim highlight -->
+    <polyline points="208,285 325,173 442,285" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
+
+    <!-- Cottage Door (Arched) -->
+    <path d="M295 405 V335 Q295 320 310 320 Q325 320 325 335 V405 Z" fill="#1b4332" />
+    <!-- Door handle -->
+    <circle cx="320" cy="365" r="3" fill="#d4a373" />
+
+    <!-- Cottage Windows -->
+    <rect x="355" y="315" width="36" height="36" rx="8" fill="#e9e5d9" />
+    <line x1="373" y1="315" x2="373" y2="351" stroke="#b88657" stroke-width="3" />
+    <line x1="355" y1="333" x2="391" y2="333" stroke="#b88657" stroke-width="3" />
+    
+    <!-- Warm Window Glow -->
+    <rect x="357" y="317" width="14" height="14" rx="2" fill="#faede2" opacity="0.8" />
+  </g>
+
+  <!-- Small Village Trail / Ground Arc -->
+  <path d="M285 405 Q305 440 325 450 Q310 452 295 450 Q280 435 270 405 Z" fill="#d4a373" opacity="0.75" />
+</svg>
